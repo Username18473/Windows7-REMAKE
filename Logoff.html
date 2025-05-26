@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logoff</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('Wallpapers/Login.png'); /* Replace with your background image */
+            background-size: cover;
+            color: white; /* Change font color to white */
+    .message-container {
+        display: flex;
+        align-items: center; /* Aligns items vertically */
+        text-align: center;
+    }
+    .message-container img {
+        margin-right: 10px; /* Space between GIF and header */
+        vertical-align: middle; /* Ensures alignment with text */
+    }
+    .message-container h1 {
+        margin: 0; /* Removes unnecessary margins */
+    }
+</style>
+
+</head>
+<body>
+    <div class="message-container">
+        <img src="Misc/Busy.gif" alt="Loading Animation" width="50" height="50">
+        <h1 style="margin-top: 0px;">Logging Off</h1>
+    </div>
+    <script>
+        // Redirect to the login screen after 2 seconds
+        setTimeout(function() {
+            window.location.href = "Login.html"; // Change this to your actual login page
+        }, 2000);
+    </script>
+</body>
+</html>
+

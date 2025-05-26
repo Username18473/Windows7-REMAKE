@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        :root {
+            --background-image: url('Wallpapers/Login.png'); /* Update with the correct image path */
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: var(--background-image);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .login-container {
+            text-align: center;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .input-group input[type="password"] {
+            padding: 10px;
+            margin-right: 10px; /* Space between the password box and image button */
+        }
+        .input-group input[type="image"] {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === 'your_password') { // Replace 'your_password' with the actual password logic
+                window.location.href = "Index.html";
+            } else {
+                window.location.href = "Index.html";
+            }
+        }
+
+        window.onload = function () {
+            const passwordInput = document.getElementById('password');
+            const warning = document.getElementById('caps-lock-warning');
+
+            passwordInput.addEventListener('keydown', (event) => {
+                if (event.getModifierState('CapsLock')) {
+                    warning.style.display = 'block';
+                }
+            });
+
+            passwordInput.addEventListener('keyup', (event) => {
+                if (!event.getModifierState('CapsLock')) {
+                    warning.style.display = 'none';
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <img src="Misc/Profile.png" alt="Profile" style="width: 150px; height: 150px; margin-bottom: 20px;">
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="image" src="Popup-Buttons/Foward.png" alt="Login" width="40" height="40">
+            </div>
+            <div id="caps-lock-warning">
+                <img src="Balloon/Caplocks.png" alt="Caps Lock is On" width="360" height="180" style="display: block;">
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
