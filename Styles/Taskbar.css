@@ -1,0 +1,68 @@
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(32, 32, 32, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: white;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.start-button img {
+    height: 24px;
+    margin-right: 5px;
+}
+
+.taskbar-items {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.start-menu-item {
+    position: relative;
+    margin-top: 15px; /* Adjust the value as needed */
+}
+.start-menu-item:hover {
+    background-color: rgba(0, 0, 255, 0.2); /* Light blue background */
+    border: 2px solid rgba(0, 0, 255, 0.5); /* Light blue border */
+    border-radius: 5px; /* Optional: Add border radius for aesthetics */
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+        #webcamIcon:hover {
+    background-color: rgba(0, 0, 255, 0.2); /* Add specific hover effect */
+    border: 2px solid rgba(0, 0, 255, 0.5); /* Specific border for webcam icon */
+    border-radius: 5px;
+}
+.taskbar-buttons {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+    margin-left: -900px;
+}
+.taskbar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Icon above text */
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 2px;
+}
+.taskbar-button img {
+    width: 30px;
+    height: 30px;
+}
+.taskbar-button:hover {
+    background-color: rgba(192, 192, 192, 0.2); /* Semi-transparent background */
+}
